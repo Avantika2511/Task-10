@@ -1,0 +1,35 @@
+1. The dataset contains 1000 rows and 8 columns. No missing values were found in any feature.
+
+2. Exploratory Data Analysis focused on the Math Score column.
+
+3. Math score descriptive statistics:
+   - Mean: ~66
+   - Median: ~66
+   - Standard Deviation: ~15
+   - Minimum: 0
+   - Maximum: 100
+
+4. Histogram visualization showed slight right skewness, indicating more students scored above average compared to extremely low values.
+
+5. Boxplot revealed several lower-end outliers in math scores.
+
+6. Outliers were detected using the IQR method:
+   - Q1 ≈ 57
+   - Q3 ≈ 77
+   - IQR ≈ 20
+   - Lower Bound ≈ 27
+   - Upper Bound ≈ 107
+
+7. Students scoring below the lower bound were marked using an outlier flag column.
+
+8. Instead of removing rows, outliers were capped at the lower IQR boundary to preserve dataset size and avoid losing valid academic records.
+
+9. Correlation analysis showed:
+   - Math vs Reading score ≈ 0.82 (strong positive)
+   - Math vs Writing score ≈ 0.80 (strong positive)
+
+10. This indicates that students who perform well in math generally also perform well in reading and writing.
+
+11. Outliers were retained (after capping) because extremely low scores likely represent genuine student performance rather than data errors.
+
+12. Final cleaned dataset was exported successfully as clean_data.csv for further modeling or visualization.
